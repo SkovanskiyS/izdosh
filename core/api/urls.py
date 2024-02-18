@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import image_process
+from .views import ImageProcessView
 
 urlpatterns = [
-    path('v1/image_process/', image_process, name='process_image'),
-
+    path('v1/image_process/', ImageProcessView.as_view(), name='process_image'),
 ]
